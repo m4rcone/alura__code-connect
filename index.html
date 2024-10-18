@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Connect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside>
+        <img src="img/logo.svg" alt="logo code connect">
+        <ul class="list-links">
+            <li>
+                <a href="#" class="item-link">Publicar</a>
+            </li>
+            <li>
+                <a href="#" class="item-link">
+                    <img src="img/feed.svg" alt="ícone feed">
+                    Feed
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item-link">
+                    <img src="img/account-circle.svg" alt="ícone perfil">
+                    Perfil
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item-link">
+                    <img src="img/info.svg" alt="ícone sobre nós">
+                    Sobre nós
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item-link">
+                    <img src="img/logout.svg" alt="ícone sair">
+                    Sair
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="container-publish">
+            <div class="container-image">
+                <img class="container-image__image" id="project-image" src="img/code-editor.svg" alt="imagem do projeto">
+                <button class="container-image__button" id="button-upload">Carregar imagem</button>
+                <input type="file" id="image-upload" accept="image/" style="display: none;">
+                <div class="container-image-name">
+                    <p>image_projeto.png</p>
+                </div>
+            </div>
+
+            <div class="container-description">
+                <h2>Novo projeto</h2>
+                <form action="">
+                    <div>
+                        <label for="project-name">Nome do projeto</label>
+                        <input type="text" id="project-name" onkeypress="if(event.key === 'Enter') {event.preventDefault();}"> <!--Previnir que o formulário reset ao clicar enter-->
+                    </div>
+                    <div>
+                        <label for="project-description">Descrição</label>
+                        <textarea name="project-description" id="project-description"></textarea>
+                    </div>
+                    <div>
+                        <label for="project-tags">Tags</label>
+                        <input type="text" id="project-tags">
+                        <ul class="list-tags" id="list-tags">
+
+                        </ul>
+                    </div>
+                    <div class="container-buttons">
+                        <button class="button-discard" id="button-discard">Descartar</button>
+                        <button class="button-publish" id="button-publish">Publicar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
